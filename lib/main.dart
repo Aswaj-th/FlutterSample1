@@ -17,10 +17,29 @@ class MyWidget extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  String text =
+      "Some text here jf;sajdf;asdjf ksj f;jasd kf;sadjfdklsfj;dskj ;sdjf kdsja f; j";
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.orange, appBar: AppBar());
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 239, 174, 77),
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Center(
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              color: Colors.yellow,
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
