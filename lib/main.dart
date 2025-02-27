@@ -31,7 +31,16 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(child: Container(color: Colors.red)),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(50),
+                  border: Border.all(color: Colors.green, width: 5),
+                ),
+                child: Center(child: Text('Simple Text')),
+              ),
+            ),
             Expanded(
               flex: 2,
               child: Container(
